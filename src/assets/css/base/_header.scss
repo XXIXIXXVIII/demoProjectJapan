@@ -1,0 +1,151 @@
+#header {
+  .pc {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.06);
+    padding: 20px 100px;
+    border-bottom: 2px solid #2D4B73;
+
+    @include pc {
+      padding: get_pc(20) get_pc(100);
+    }
+
+    @include sp {
+      padding: get_sp(9) 0 get_sp(5) get_sp(10);
+    }
+
+    .logo {
+      h1 {
+        font-size: 56px;
+        font-weight: 900;
+
+        @include pc {
+          font-size: get_pc(56);
+        }
+
+        @include sp {
+          font-size: get_sp(25);
+        }
+
+        p {
+          font-size: 21px;
+          line-height: 30px;
+          font-weight: bold;
+          top: -10px;
+
+          @include pc {
+            font-size: get_pc(21);
+            line-height: get_pc(30);
+            top: get_pc(-10);
+          }
+
+          @include sp {
+            font-size: get_sp(9);
+            line-height: get_sp(13);
+            top: get_sp(-6);
+          }
+
+        }
+      }
+    }
+
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      ul {
+        display: flex;
+        align-items: center;
+
+        li {
+          @include pc {
+            margin-left: get_pc(48);
+          }
+
+          a {
+            text-decoration: none;
+            color: $clr-txt-brown;
+            font-size: 26px;
+            font-weight: 500;
+            line-height: 26px;
+            transition: 0.3s cubic-bezier(0.45, 0, 0.55, 1);
+            position: relative;
+            padding-bottom: 8px;
+
+            @include pc {
+              font-size: get_pc(26);
+              line-height: get_pc(26);
+              padding-bottom: get_pc(8);
+            }
+
+            &::before {
+              width: 100%;
+              height: 2px;
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              background-color: $clr-txt-brown;
+              transform-origin: right top;
+              transform: scale(0, 1);
+              transition: transform 0.3s;
+            }
+
+            &:hover::before {
+              transform-origin: left top;
+              transform: scale(1, 1);
+            }
+          }
+
+
+
+        }
+      }
+
+      .btn_contact {
+        margin-left: 100px;
+        background-color: #F04F28;
+        color: #ffffff;
+        font-size: 28px;
+        line-height: 24px;
+        font-weight: bold;
+        text-align: center;
+        display: inline-block;
+        padding: 30px 45px;
+        transition: 0.4s cubic-bezier(0.37, 0, 0.63, 1);
+        border-radius: 5px;
+        border: 1px solid #F04F28;
+  
+        @include pc {
+            margin-left: get_pc(100);
+            font-size: get_pc(28);
+            line-height: get_pc(24);
+            padding: get_pc(31) get_pc(45);
+            border-radius: get_pc(5);
+        }
+  
+        &:hover {
+            background: #ffffff;
+            color: #F04F28;
+            border: 1px solid #F04F28;
+        }
+    }
+    }
+
+  
+
+
+
+
+  }
+}

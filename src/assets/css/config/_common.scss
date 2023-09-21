@@ -1,0 +1,15 @@
+.util_sp {
+  display: none !important;
+
+  @include sp {
+      display: block;
+  }
+}
+
+.util_pc {
+  display: block;
+
+  @include sp {
+      display: none !important;
+  }
+}
