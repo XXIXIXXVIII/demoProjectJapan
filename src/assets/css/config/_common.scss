@@ -32,14 +32,22 @@ img {
   display: none !important;
 
   @include sp {
-    display: block;
+    display: block !important;
   }
 }
 
 .util_pc {
-  display: block;
+  display: block !important;
 
   @include sp {
     display: none !important;
+  }
+}
+
+.util_pc_flex {
+  display: flex !important;
+
+  @include sp {
+      display: none !important;
   }
 }
