@@ -2,6 +2,9 @@ import banner from "../assets/images/banner.jpg";
 import banner_sp from "../assets/images/banner_sp.jpg";
 import Advertisement from "./Advertisement";
 import Evaluate from "./Evaluate";
+import Flow from "./Flow";
+import Rate from "./Rate";
+import Voices from "./Voices";
 
 export default function Main() {
   return (
@@ -29,6 +32,10 @@ export default function Main() {
       <Advertisement />
       <Evaluate />
       <Advertisement />
+      <Rate/>
+      <Voices/>
+      <Advertisement />
+      <Flow/>
     </main>
   );
 }
