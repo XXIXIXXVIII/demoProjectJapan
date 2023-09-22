@@ -1,5 +1,5 @@
 #header {
-  .pc {
+  .wrap {
     position: fixed;
     left: 0;
     top: 0;
@@ -58,57 +58,62 @@
       }
     }
 
-
-    nav {
-      display: flex;
+    .util_pc_flex {
       align-items: center;
-      justify-content: space-between;
-      ul {
+
+
+      nav {
         display: flex;
         align-items: center;
+        justify-content: space-between;
 
-        li {
-          @include pc {
-            margin-left: get_pc(48);
-          }
+        ul {
+          display: flex;
+          align-items: center;
 
-          a {
-            text-decoration: none;
-            color: $clr-txt-brown;
-            font-size: 26px;
-            font-weight: 500;
-            line-height: 26px;
-            transition: 0.3s cubic-bezier(0.45, 0, 0.55, 1);
-            position: relative;
-            padding-bottom: 8px;
-
+          li {
             @include pc {
-              font-size: get_pc(26);
-              line-height: get_pc(26);
-              padding-bottom: get_pc(8);
+              margin-left: get_pc(48);
             }
 
-            &::before {
-              width: 100%;
-              height: 2px;
-              content: "";
-              position: absolute;
-              left: 0;
-              bottom: 0;
-              background-color: $clr-txt-brown;
-              transform-origin: right top;
-              transform: scale(0, 1);
-              transition: transform 0.3s;
+            a {
+              text-decoration: none;
+              color: $clr-txt-brown;
+              font-size: 26px;
+              font-weight: 500;
+              line-height: 26px;
+              transition: 0.3s cubic-bezier(0.45, 0, 0.55, 1);
+              position: relative;
+              padding-bottom: 8px;
+
+              @include pc {
+                font-size: get_pc(26);
+                line-height: get_pc(26);
+                padding-bottom: get_pc(8);
+              }
+
+              &::before {
+                width: 100%;
+                height: 2px;
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background-color: $clr-txt-brown;
+                transform-origin: right top;
+                transform: scale(0, 1);
+                transition: transform 0.3s;
+              }
+
+              &:hover::before {
+                transform-origin: left top;
+                transform: scale(1, 1);
+              }
             }
 
-            &:hover::before {
-              transform-origin: left top;
-              transform: scale(1, 1);
-            }
+
+
           }
-
-
-
         }
       }
 
@@ -125,24 +130,92 @@
         transition: 0.4s cubic-bezier(0.37, 0, 0.63, 1);
         border-radius: 5px;
         border: 1px solid #F04F28;
-  
+
         @include pc {
-            margin-left: get_pc(100);
-            font-size: get_pc(28);
-            line-height: get_pc(24);
-            padding: get_pc(31) get_pc(45);
-            border-radius: get_pc(5);
+          margin-left: get_pc(100);
+          font-size: get_pc(28);
+          line-height: get_pc(24);
+          padding: get_pc(31) get_pc(45);
+          border-radius: get_pc(5);
         }
-  
+
         &:hover {
-            background: #ffffff;
-            color: #F04F28;
-            border: 1px solid #F04F28;
+          background: #ffffff;
+          color: #F04F28;
+          border: 1px solid #F04F28;
         }
-    }
+      }
     }
 
-  
+    .menusp {
+      position: absolute;
+      top: get_sp(12);
+      bottom: 0;
+      right: get_sp(21);
+      width: get_sp(31);
+      height: get_sp(27);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      cursor: pointer;
+
+      .line {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          flex-shrink: 0;
+          background-color: $clr-base-darkBlue;
+          transform-origin: center;
+          transition: all 0.2s linear;
+          border-radius: 999px;
+          margin-bottom: get_sp(7);
+          width: get_sp(33);
+          height: get_sp(4);
+        }
+
+        &::after {
+          margin-bottom: 0;
+        }
+
+        span {
+          display: block;
+          flex-shrink: 0;
+          background-color: #2D4B73;
+          width: get_sp(33);
+          height: get_sp(4);
+          border-radius: 999px;
+          margin-bottom: get_sp(7);
+        }
+      }
+
+      &.active {
+        .line {
+          span {
+            opacity: 0;
+          }
+
+          &::before {
+            width: get_sp(35);
+            transform: rotate(45deg) translate(get_sp(7), get_sp(7));
+            margin-bottom: get_sp(5);
+          }
+
+          &::after {
+            width: get_sp(35);
+            transform: rotate(-45deg) translate(get_sp(7), get_sp(-7));
+          }
+        }
+      }
+    }
+
+
+
+
 
 
 

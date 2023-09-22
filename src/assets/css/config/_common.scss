@@ -43,3 +43,11 @@ img {
     display: none !important;
   }
 }
+
+.util_pc_flex {
+  display: flex !important;
+
+  @include sp {
+      display: none !important;
+  }
+}
