@@ -1,6 +1,7 @@
 import banner from "../assets/images/banner.jpg";
 import banner_sp from "../assets/images/banner_sp.jpg";
 import Advertisement from "./Advertisement";
+import Evaluate from "./Evaluate";
 
 export default function Main() {
   return (
@@ -25,6 +26,8 @@ export default function Main() {
           />
         </div>
       </section>
+      <Advertisement />
+      <Evaluate />
       <Advertisement />
     </main>
   );

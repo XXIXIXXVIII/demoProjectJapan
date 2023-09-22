@@ -32,12 +32,12 @@ img {
   display: none !important;
 
   @include sp {
-    display: block;
+    display: block !important;
   }
 }
 
 .util_pc {
-  display: block;
+  display: block !important;
 
   @include sp {
     display: none !important;
