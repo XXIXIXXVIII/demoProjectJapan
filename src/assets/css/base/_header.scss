@@ -1,5 +1,6 @@
 #header {
-  .wrap {
+  width: 100%;
+  .header-top {
     position: fixed;
     left: 0;
     top: 0;
@@ -10,7 +11,7 @@
     text-align: center;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
+    background-color: $clr-white;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.06);
     padding: 20px 100px;
     border-bottom: 2px solid #2D4B73;
@@ -21,6 +22,14 @@
 
     @include sp {
       padding: get_sp(9) 0 get_sp(5) get_sp(10);
+    }
+
+    .header-top{
+      width: 100%;
+      display: flex;
+      z-index: 999;
+      align-items: center;
+      justify-content: space-between;
     }
 
     .logo {
@@ -212,13 +221,82 @@
         }
       }
     }
-
-
-
-
-
-
-
-
   }
+
+  
+  .nav_sp {
+    margin-left: 0;
+    position: fixed;
+    top: get_sp(52);
+    left: 0;
+    transform: translateY(-120%);
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background-color: #eef3f6;
+    align-items: center;
+    padding: get_sp(60) 0 0;
+    z-index: 5;
+    transition: all 0.4s linear;
+    overflow-y: scroll;
+    overscroll-behavior-y: unset;
+
+    &.active {
+        transform: translateY(0);
+        z-index: 999;
+    }
+
+    .inner {
+        max-width: 100%;
+        padding: 0 get_sp(20);
+        margin: 0 auto;
+        text-align: left;
+
+        ul {
+            li {
+                position: relative;
+                margin-bottom: get_sp(32);
+
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: get_sp(14);
+                    height: get_sp(2);
+                    background-color: #2D4B73;
+                }
+
+                &:last-child {
+                    margin-bottom: get_sp(38);
+                }
+            }
+
+            a {
+                padding-left: get_sp(23);
+                font-size: get_sp(16);
+                line-height: get_sp(30);
+                color: #2D4B73;
+                font-weight: 500;
+            }
+        }
+
+        .list_sns {
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: get_sp(46);
+                font-weight: bold;
+                margin-bottom: get_sp(36);
+                background-color: #F04F28;
+                color: #ffffff;
+                border-radius: get_sp(5);
+            }
+        }
+
+    }
+}
 }
