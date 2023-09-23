@@ -1,5 +1,5 @@
-import MailButton from "./MailButton";
-import PhoneButton from "./PhoneButton";
+import MailButton from "../Main/MailButton";
+import PhoneButton from "../Main/PhoneButton";
 
 export default function Footer() {
   const thumb = "thumb";

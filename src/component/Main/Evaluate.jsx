@@ -1,16 +1,16 @@
-import img_left from "../assets/images/img_left.png";
-import img_left_1 from "../assets/images/img_left_1.png";
-import img_right from "../assets/images/img_right.png";
-import img_right_1 from "../assets/images/img_right_1.png";
-import img_evaluate_1 from "../assets/images/img_evaluate_1.png";
-import conversion from "../assets/images/conversion.png";
-import pay from "../assets/images/pay.png";
-import time from "../assets/images/time.png";
-import shield from "../assets/images/shield.png";
-import holiday from "../assets/images/holiday.png";
-import point1 from "../assets/images/point1.png";
-import point2 from "../assets/images/point2.png";
-import point3 from "../assets/images/point3.png";
+import img_left from "../../assets/images/img_left.png";
+import img_left_1 from "../../assets/images/img_left_1.png";
+import img_right from "../../assets/images/img_right.png";
+import img_right_1 from "../../assets/images/img_right_1.png";
+import img_evaluate_1 from "../../assets/images/img_evaluate_1.png";
+import conversion from "../../assets/images/conversion.png";
+import pay from "../../assets/images/pay.png";
+import time from "../../assets/images/time.png";
+import shield from "../../assets/images/shield.png";
+import holiday from "../../assets/images/holiday.png";
+import point1 from "../../assets/images/point1.png";
+import point2 from "../../assets/images/point2.png";
+import point3 from "../../assets/images/point3.png";
 
 export default function Evaluate() {
   return (

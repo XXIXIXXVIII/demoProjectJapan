@@ -1,7 +1,7 @@
-import img_flow_1 from '../assets/images/img_flow_1.png'
-import img_flow_2 from '../assets/images/img_flow_2.png'
-import img_flow_3 from '../assets/images/img_flow_3.png'
-import img_flow_4 from '../assets/images/img_flow_4.png'
+import img_flow_1 from '../../assets/images/img_flow_1.png'
+import img_flow_2 from '../../assets/images/img_flow_2.png'
+import img_flow_3 from '../../assets/images/img_flow_3.png'
+import img_flow_4 from '../../assets/images/img_flow_4.png'
 
 export default function Flow() {
   return (

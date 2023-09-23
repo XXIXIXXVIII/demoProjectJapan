@@ -1,12 +1,12 @@
-import rate from '../assets/images/rate.png'
-import img_3 from '../assets/images/img_3.png'
-import img_5 from '../assets/images/img_5.png'
-import img_1 from '../assets/images/img_1.png'
-import img_4 from '../assets/images/img_4.png'
-import img_6 from '../assets/images/img_6.png'
-import img_7 from '../assets/images/img_7.png'
-import img_8 from '../assets/images/img_8.png'
-import img_9 from '../assets/images/img_9.png'
+import rate from '../../assets/images/rate.png'
+import img_3 from '../../assets/images/img_3.png'
+import img_5 from '../../assets/images/img_5.png'
+import img_1 from '../../assets/images/img_1.png'
+import img_4 from '../../assets/images/img_4.png'
+import img_6 from '../../assets/images/img_6.png'
+import img_7 from '../../assets/images/img_7.png'
+import img_8 from '../../assets/images/img_8.png'
+import img_9 from '../../assets/images/img_9.png'
 
 export default function Voices() {
   return (
