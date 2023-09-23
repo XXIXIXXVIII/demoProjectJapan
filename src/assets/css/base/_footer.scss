@@ -1,6 +1,5 @@
 #footer {
   background: #f2fbfd 0% 0% no-repeat padding-box;
-  opacity: 1;
   backdrop-filter: blur(11px);
   position: fixed;
   left: 0;
@@ -332,4 +331,14 @@
       }
     }
   }
+}
+
+.show-footer {
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+
+.hide-footer {
+  opacity: 0;
+  transition: opacity 0.6s ease;
 }
