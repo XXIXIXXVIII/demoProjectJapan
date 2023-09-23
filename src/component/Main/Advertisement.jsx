@@ -1,5 +1,5 @@
-import img_advertisement from "../assets/images/img_advertisement.png";
-import img_advertisement_sp from "../assets/images/img_advertisement_sp.png";
+import img_advertisement from "../../assets/images/img_advertisement.png";
+import img_advertisement_sp from "../../assets/images/img_advertisement_sp.png";
 import MailButton from "./MailButton";
 import PhoneButton from "./PhoneButton";
 

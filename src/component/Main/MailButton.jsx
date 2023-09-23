@@ -1,6 +1,7 @@
-import img_2 from "../assets/images/img_2.png";
+import img_2 from "../../assets/images/img_2.png";
 
 export default function MailButton(props) {
+  // eslint-disable-next-line react/prop-types
   const thumb = props.thumb;
   return (
     <div className="mail">
